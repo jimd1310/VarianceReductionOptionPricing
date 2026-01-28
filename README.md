@@ -48,11 +48,11 @@ cmake --build .
 
 The project is designed with modularity and extensibility in mind. Core components are separated into:
 
-- Simulation engines – handle Monte Carlo path generation and random number management.
+- Simulation engines - handle Monte Carlo path generation and random number management.
 
-- Option definitions – encapsulate payoffs and option-specific logic.
+- Option definitions - encapsulate payoffs and option-specific logic.
 
-- Variance reduction techniques – such as antithetic sampling and control variates, implemented independently so they can be applied to any simulation or option type.
+- Variance reduction techniques - such as antithetic sampling and control variates, implemented independently so they can be applied to any simulation or option type.
 
 This structure allows new models, options, or variance reduction methods to be added without modifying existing code, mirroring best practices in production-grade quantitative libraries.
 

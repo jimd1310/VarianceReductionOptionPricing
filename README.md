@@ -130,26 +130,26 @@ int main()
 
 - **Product scope:** Currently restricted to European vanilla options. Path-dependent securities (Asian, barrier) and early-exercise features (American/Bermudan) require Brownian bridge path generation and least-squares Monte Carlo (Longstaff-Schwartz) extensions, respectively.
 
-- **Calibration stability:** Calibrated control variate coefficients ($\hat \beta_{\text{call}} = 0.693$, $\hat \beta_{\text{put}} = -0.315$) empirically converge to theoretical Delta. However, $\hat \beta$  stability across volatility surfaces $\sigma$, tenors $T$, and moneyness $S/K$ requires profiling for production deployment.
+- **Calibration stability:** Calibrated control variate coefficients $\big(\hat \beta_{\text{call}} = 0.693, \ \hat \beta_{\text{put}} = -0.315 \big)$ empirically converge to theoretical Delta. However, $\hat \beta$  stability across volatility surfaces $\sigma$, tenors $T$, and moneyness $S/K$ requires profiling for production deployment.
 
 - **Measurement noise:** Single-run benchmarks exhibit ±5-10% noise due to OS scheduling and cache effects. 
 
 ## Future Work
 
-**Product Expansion**
+#### Product Expansion
 
 Extend coverage to path-dependent and multi-asset derivatives, such as:
 
 - Barrier options and Asian options.
 - Multi-asset baskets.
 
-**Model Extensions**
+#### Model Extensions
 
 Progress beyond Black-Scholes to capture market microstructure, such as:
 
 - Heston model: Stochastic volatility with characteristic function methods for Fourier-based pricing.
 
-**Risk Management**
+#### Risk Management
 
 - Adding sensitivities (Greeks) and stress-testing model stability via parameter perturbation.
 

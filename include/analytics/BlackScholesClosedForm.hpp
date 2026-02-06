@@ -10,3 +10,14 @@ double black_scholes_price(
     double maturity, 
     OptionType type
 );
+
+/// Gives the Black-Scholes analytic solution for digital options.
+double black_scholes_digital_price(
+    double spot, 
+    double strike, 
+    double rate, 
+    double volatility, 
+    double maturity, 
+    double payout,
+    OptionType type
+);

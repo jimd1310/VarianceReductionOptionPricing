@@ -15,6 +15,7 @@ set(OPTION_PRICER_SOURCES
      src/core/RandomEngine.cpp
      src/models/BlackScholesModel.cpp
      src/options/EuropeanOption.cpp
+     src/options/DigitalOption.cpp
      src/samplers/MCSampler.cpp
      src/samplers/AntitheticSampler.cpp
      src/samplers/ControlSampler.cpp

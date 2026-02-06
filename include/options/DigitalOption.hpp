@@ -1,17 +1,17 @@
-#pragma once
+#pragma once 
 #include "options/Option.hpp"
 #include "options/OptionType.hpp"
 
-/// European option (vanilla, payoff depends on terminal price only).
-class EuropeanOption : public Option
+class DigitalOption : public Option 
 {
 public: 
-    EuropeanOption(
+    DigitalOption(
         double strike, 
         double maturity, 
+        double payout, 
         OptionType type
-    ); 
-    
+    );
+
     /// Payoff at maturity given underlying price ST.
     double payoff(double ST) const override; 
     double maturity() const override { return maturity_; }
@@ -22,5 +22,6 @@ public:
 private: 
     double strike_; 
     double maturity_; 
+    double payout_;
     OptionType type_; 
 };
